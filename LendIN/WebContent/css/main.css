@@ -1,0 +1,134 @@
+/* Base CSS */
+.alignleft {
+    float: left;
+    margin-right: 15px;
+}
+.alignright {
+    float: right;
+    margin-left: 15px;
+}
+.aligncenter {
+    display: block;
+    margin: 0 auto 15px;
+}
+a:focus { outline: 0 solid }
+img {
+    max-width: 100%;
+    height: auto;
+}
+.fix { overflow: hidden }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 15px;
+    font-weight: 700;
+}
+html,
+body { height: 100% }
+
+a {
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    color: #333;
+}
+a:hover { text-decoration: none }
+
+
+
+.search-box{margin:80px auto;position:absolute;}
+.caption{margin-bottom:50px;}
+.loginForm input[type=text], .loginForm input[type=password], .loginForm input[type=email], .loginForm input[type=number]{
+	margin-bottom:10px;
+}
+.loginForm input[type=submit]{
+	background:#006699;
+	color:#fff;
+	font-weight:700;
+	
+}
+
+#pswd_info {
+	background: #dfdfdf none repeat scroll 0 0;
+	color: #fff;
+	left: 26%;
+	position: absolute;
+	top: 20%;
+	z-index:1;
+}
+#pswd_info1 {
+	background: #dfdfdf none repeat scroll 0 0;
+	color: #fff;
+	right: 10%;
+	position: relative;
+	top: 20%;
+	z-index:3;
+	
+}
+#pswd_info1 h4{
+    background: black none repeat scroll 0 0;
+    display: block;
+    font-size: 11px;
+    letter-spacing: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+#pswd_info h4{
+    background: black none repeat scroll 0 0;
+    display: block;
+    font-size: 12px;
+    letter-spacing: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+#pswd_info ul {
+    list-style: outside none none;
+}
+#pswd_info1 ul {
+    list-style: outside none none;
+}
+#pswd_info ul li {
+   padding: 5px;
+   
+}
+
+#pswd_info1 ul li {
+   padding: 10px;
+ 
+}
+
+.valid {
+	background: rgba(0, 0, 0, 0) url("https://s19.postimg.org/vq43s2wib/valid.png") no-repeat scroll -5px 6px;
+	color: green;
+	line-height: 21px;
+	padding-left: 12px;
+	  margin-left: 5px;
+}
+
+.invalid {
+	background: rgba(0, 0, 0, 0) url("https://s19.postimg.org/olmaj1p8z/invalid.png") no-repeat scroll -10px 6px;
+	color: red;
+	line-height: 21px;
+	padding-left: 12px;
+}
+.valid1 {
+	background: rgba(0, 0, 0, 0) url("https://s19.postimg.org/vq43s2wib/valid.png") no-repeat scroll 2px 6px;
+	color: green;
+	line-height: 21px;
+	padding-left: 12px;
+	  margin-left: 5px;
+}
+
+.invalid1 {
+	background: rgba(0, 0, 0, 0) url("https://s19.postimg.org/olmaj1p8z/invalid.png") no-repeat scroll 2px 6px;
+	color: red;
+	line-height: 21px;
+	padding-left: 12px;
+}
+#pswd_info {
+    display:none;
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html >
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <meta charset="UTF-8">
+  <title>DCB Innovation Hackathon</title>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:400,300'>
+<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+
+      <link rel="stylesheet" href="css/form.css">
+      <link rel="stylesheet" href="css/main.css">
+
+  
+</head>
+<body>
+  <div class="cotn_principal">
+  <div class="jumbotron">
+    <h1 style="	font-family: Palatino,Palatino Linotype,Palatino LT STD,Book Antiqua,Georgia,serif; color:#29446d;">LendIN</h1>
+    
+  </div>
+<div class="cont_centrar">
+
+  <div class="cont_login">
+<div class="cont_info_log_sign_up">
+      <div class="col_md_login">
+<div class="cont_ba_opcitiy">
+        
+        <h2>LOGIN</h2>  
+  <p>Already have an account?</p> 
+  <button class="btn_login" onclick="cambiar_login()">LOGIN</button>
+  </div>
+  </div>
+<div class="col_md_sign_up">
+<div class="cont_ba_opcitiy">
+  <h2>SIGN UP</h2>
+
+  
+  <p>Create an account.</p>
+
+  <button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
+</div>
+  </div>
+       </div>
+
+    
+    <div class="cont_back_info">
+       <div class="cont_img_back_grey">
+       <img src="img/pic10.jpg" alt="" />
+       </div>
+       
+    </div>
+<div class="cont_forms" >
+    <div class="cont_img_back_">
+       <img src="img/pic10.jpg" alt="" />
+       </div>
+ <div class="cont_form_login">
+<a href="#" onclick="ocultar_login_sign_up()" ><i class="material-icons">&#xE5C4;</i></a>
+   <h2>LOGIN</h2>
+<form action="Login">
+		<input type="text" id="name" placeholder="Username" name="user" required>
+		<input type="password" id="paw"  placeholder="Password" name="pass" required>
+		<input type="submit" class="btn_login" id="submit" value="Login">
+	</form>
+  </div>
+  
+   <div class="cont_form_sign_up">
+<a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
+     <h2>SIGN UP</h2>
+	<form action="NewUser" method="post" onsubmit="return ValidationEvent()">
+		<input type="text" id="name" placeholder="Username" name="username" required>
+		<input type="password" id="paw" placeholder="Password" name="password" required>
+		<input type="email" placeholder="E-Mail" name="email" required>
+		<input type="number" placeholder="Phone Number" name="number" required>
+		<input type="number" placeholder="AADHAR Number" name="aadhar" required>
+		<input type="text" placeholder="Pan Number" name="pan" required>
+		<input type="submit" class="btn_login" id="submit" value="Register">
+	</form>
+
+  </div>
+
+    </div>
+    <br><br><br><br>
+<a href="forgot.html" class="btn_login">Forgot Password</a>
+  </div>
+
+				<div id="pswd_info" style="border-radius:15px">
+					<h4 style="padding: 2%;border-radius:15px 15px 0px 0px">Password must follow these requirements</h4>
+					<ul>
+						<li id="letter" class="invalid1">At least <strong>one lower case letter</strong></li>
+						<li id="capital" class="invalid1">At least <strong>one capital letter</strong></li>
+						<li id="number" class="invalid1">At least <strong>one number</strong></li>
+						<li id="length" class="invalid1">Be at least <strong>8 characters</strong></li>
+						<li id="space" class="invalid1">Should<strong> use [~,!,@,#,$,%,^,&,*,-]</strong></li>
+					</ul>
+				</div>
+ </div>
+</div>
+  
+    <script src="js/form.js"></script>
+    <script type="text/javascript">
+	$(document).ready(function(){
+	
+	$('input[type=password]').keyup(function() {
+		var pswd = $(this).val();
+		
+		//validate the length
+		if ( pswd.length < 8 ) {
+			$('#length').removeClass('valid1').addClass('invalid1');
+		} else {
+			$('#length').removeClass('invalid1').addClass('valid1');
+		}
+		
+		//validate letter
+		if ( pswd.match(/[a-z]/) ) {
+			$('#letter').removeClass('invalid1').addClass('valid1');
+		} else {
+			$('#letter').removeClass('valid1').addClass('invalid1');
+		}
+
+		//validate capital letter
+		if ( pswd.match(/[A-Z]/) ) {
+			$('#capital').removeClass('invalid1').addClass('valid1');
+		} else {
+			$('#capital').removeClass('valid1').addClass('invalid1');
+		}
+
+		//validate number
+		if ( pswd.match(/\d/) ) {
+			$('#number').removeClass('invalid1').addClass('valid1');
+		} else {
+			$('#number').removeClass('valid1').addClass('invalid1');
+		}
+		
+		//validate space
+		if ( pswd.match(/[^a-zA-Z0-9\-\/]/) ) {
+			$('#space').removeClass('invalid1').addClass('valid1');
+		} else {
+			$('#space').removeClass('valid1').addClass('invalid1');
+		}
+		
+	}).focus(function() {
+		$('#pswd_info').show();
+	}).blur(function() {
+		$('#pswd_info').hide();
+	});
+	
+});
+	function ValidationEvent()
+	{
+		if(document.getElementById('length').className=='valid1'&&document.getElementById('letter').className=='valid1'&&document.getElementById('capital').className=='valid1'&&document.getElementById('number').className=='valid1'&&document.getElementById('space').className=='valid1')
+			{
+			return true;
+			}
+		else
+			{
+			alert('Input Password Doesnt fulfiled required passowrd conditions! Check password.');
+			return false;
+			}
+	}
+	</script>
+</body>
+</html>
